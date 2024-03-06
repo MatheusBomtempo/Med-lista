@@ -41,4 +41,4 @@ Este projeto está sob uma licença MIT.
 
 ---
 
-Desenvolvido por Matheus Bomtempo e Thaian ramalho..
+Desenvolvido por Matheus Bomtempo e Thaian ramalho.
