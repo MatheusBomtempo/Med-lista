@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do **Med-Lista**, a sua plataforma de busca médica abrangendo todas as especialidades. Desenvolvido com React para o frontend, Firebase como banco de dados e Node.js para o backend, o Med-Lista oferece uma experiência de usuário fluida e eficiente para encontrar profissionais de saúde em diversas especialidades.
 
-Visite [Med-Lista](www.med-lista.com) para explorar a plataforma.
+Visite [Med-Lista] www.med-lista.com para explorar a plataforma.
 
 ## Preview do Projeto
 
