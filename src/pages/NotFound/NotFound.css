@@ -1,0 +1,161 @@
+.notfound-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.notfound-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 75px;
+}
+
+.notfound-box {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notfound-number {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #014A49;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.notfound-icon {
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.notfound-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #014A49;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.notfound-message {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.notfound-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.notfound-btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.notfound-btn-primary {
+  background-color: #014A49;
+  color: white;
+}
+
+.notfound-btn-primary:hover {
+  background-color: #013a39;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 74, 73, 0.3);
+}
+
+.notfound-btn-secondary {
+  background-color: #f0f0f0;
+  color: #014A49;
+  border: 2px solid #014A49;
+}
+
+.notfound-btn-secondary:hover {
+  background-color: #014A49;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 74, 73, 0.3);
+}
+
+@media (max-width: 768px) {
+  .notfound-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .notfound-number {
+    font-size: 6rem;
+  }
+
+  .notfound-title {
+    font-size: 2rem;
+  }
+
+  .notfound-message {
+    font-size: 1rem;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+  }
+
+  .notfound-btn {
+    width: 100%;
+  }
+}
+

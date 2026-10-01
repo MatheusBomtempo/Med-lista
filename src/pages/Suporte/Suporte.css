@@ -1,0 +1,154 @@
+.suporte-container {
+  min-height: 100vh;
+  padding-top: 75px;
+  background: linear-gradient(120deg, #F9FFFF 0%, #ebedee 100%);
+}
+
+.suporte-hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #F1F6F8 0%, #ffffff 100%);
+  margin-bottom: 40px;
+}
+
+.suporte-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.suporte-icon-container-large {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.suporte-icon-large {
+  font-size: 120px;
+  color: #014A49;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.suporte-title {
+  margin: 0 !important;
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  color: #014A49 !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.suporte-subtitle {
+  font-size: 1.3rem !important;
+  color: #014A49 !important;
+  font-weight: 400 !important;
+  margin-top: 20px !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.suporte-section {
+  padding: 60px 20px;
+}
+
+.suporte-section-alt {
+  background: rgba(241, 246, 248, 0.5);
+}
+
+.container-suporte {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.suporte-card {
+  transition: all 0.3s ease;
+  background: #ffffff;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: fadeInUp 0.6s ease;
+}
+
+.suporte-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(1, 74, 73, 0.15) !important;
+}
+
+.suporte-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.suporte-icon {
+  font-size: 48px;
+  color: #014A49;
+  padding: 20px;
+  background: linear-gradient(135deg, #F1F6F8 0%, #e8f0f2 100%);
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.suporte-card:hover .suporte-icon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #014A49 0%, #056a68 100%);
+  color: #ffffff;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .suporte-hero {
+    padding: 40px 15px;
+  }
+
+  .suporte-title {
+    font-size: 2.5rem !important;
+  }
+
+  .suporte-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .suporte-section {
+    padding: 40px 15px;
+  }
+
+  .suporte-icon-large {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .suporte-title {
+    font-size: 2rem !important;
+  }
+
+  .suporte-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .suporte-icon {
+    font-size: 36px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .suporte-icon-large {
+    font-size: 60px;
+  }
+}
+
