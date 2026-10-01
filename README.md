@@ -1,70 +1,230 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>MED LISTA</h1>
 
-## Available Scripts
+<p><strong>Find the right doctor, compare, and review — all in one place.</strong></p>
 
-In the project directory, you can run:
+<p>
+  A doctor-discovery platform for Brazil: search by specialty, city, health insurance and rating,
+  read verified patient reviews, and let physicians manage their own public profile.
+</p>
 
-### `npm start`
+<p>
+  <a href="https://med-lista.com"><strong>🌐 Live site</strong></a> ·
+  <a href="#-features">Features</a> ·
+  <a href="#-getting-started">Getting started</a> ·
+  <a href="#-architecture">Architecture</a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&style=flat-square" />
+  <img alt="Firebase" src="https://img.shields.io/badge/Firebase-9-FFCA28?logo=firebase&logoColor=black&style=flat-square" />
+  <img alt="Ant Design" src="https://img.shields.io/badge/Ant%20Design-5-0170FE?logo=antdesign&logoColor=white&style=flat-square" />
+  <img alt="Netlify" src="https://img.shields.io/badge/Netlify-Functions-00C7B7?logo=netlify&logoColor=white&style=flat-square" />
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green?style=flat-square" />
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="docs/screenshots/home.png" alt="Med Lista home page with the specialty and city search" width="860" />
 
-### `npm test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📖 Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Med Lista** connects patients with physicians. Patients search the directory, filter by what
+matters to them and read honest reviews. Doctors register, get their **CRM** (Brazilian medical
+council registration) validated automatically, and follow how their profile performs. Admins keep
+the catalog trustworthy by approving profiles and moderating comments.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> The interface is in Brazilian Portuguese, since the platform serves Brazilian patients.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+### For patients
+- 🔎 **Smart search** by specialty, city, health insurance (*convênio*), minimum rating or doctor name
+- 🩺 **Rich doctor profiles** with specialty, CRM, location, accepted insurance plans and contact links
+- ⭐ **Reviews and ratings** to help others choose, with phone (SMS) verification to curb fake reviews
+- 💬 **Floating WhatsApp button** for quick support
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### For doctors
+- 📝 **Guided registration** and profile editing, including profile photo upload
+- ✅ **Automatic CRM validation** against the national medical council registry
+- 📊 **Dashboard** with profile views over time, ratings and link-click statistics (Instagram, Lattes)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### For admins
+- 🛡️ **Profile approval** queue (single or bulk) before a profile goes public
+- 🧹 **Comment moderation**
+- ⚙️ **Catalog management** for specialties, health insurance plans and admin users, plus global settings
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Under the hood
+- 🔐 Email/password and Google sign-in, with **private** and **admin-only** route guards
+- 🤖 **reCAPTCHA** on login and sign-up
+- ⚡ Lazy-loaded routes, images and backgrounds for fast first paint
+- 🧯 Error boundaries and a friendly 404 page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧰 Tech stack
 
-## Learn More
+| Layer | Technology |
+| --- | --- |
+| UI | React 18, React Router 6, Ant Design 5, React-Bootstrap, Tailwind CSS, Font Awesome |
+| Charts | Recharts |
+| Backend as a service | Firebase Authentication, Cloud Firestore, Cloud Storage |
+| Serverless | Netlify Functions (CRM validation through the Infosimples API) |
+| Tooling | Create React App, Docker |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🏗️ Architecture
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+┌──────────────┐        ┌────────────────────────┐
+│   Browser    │───────▶│  Firebase              │
+│  React SPA   │        │  Auth · Firestore ·    │
+│              │        │  Storage               │
+└──────┬───────┘        └────────────────────────┘
+       │ POST /.netlify/functions/validarCRM
+       ▼
+┌────────────────────────┐        ┌────────────────────┐
+│  Netlify Function      │───────▶│  Infosimples API   │
+│  (holds the API token) │        │  CFM CRM lookup    │
+└────────────────────────┘        └────────────────────┘
+```
 
-### Code Splitting
+The Infosimples token **never reaches the browser**: it lives only in the serverless function's
+environment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Project structure
 
-### Analyzing the Bundle Size
+```text
+.
+├── netlify/functions/      # Serverless CRM validation
+├── public/                 # HTML shell, manifest, redirects
+└── src/
+    ├── componentes/        # Reusable UI (Navbar, Footer, Rating, Comments, ...)
+    ├── contexts/           # AuthContext and route guards (private / admin)
+    ├── pages/              # Home, Pesquisa, PerfilMed, Avalia, Dashboard, Admin, ...
+    ├── utils/              # CRM validation hook, specialty list, admin helper
+    └── firebase.js         # Firebase initialization (env-driven)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Getting started
 
-### Making a Progressive Web App
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Node.js](https://nodejs.org/) 16 or newer and npm
+- A [Firebase](https://console.firebase.google.com/) project with **Authentication**
+  (Email/Password, Google, Phone), **Firestore** and **Storage** enabled
+- A Google [reCAPTCHA v2](https://www.google.com/recaptcha/admin) site key
+- An [Infosimples](https://infosimples.com/) API token (only needed for CRM validation)
+- [Netlify CLI](https://docs.netlify.com/cli/get-started/) to run the serverless function locally
 
-### Advanced Configuration
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+git clone https://github.com/MatheusBomtempo/Med-lista.git
+cd Med-lista
+npm install
+```
 
-### Deployment
+### Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Copy the example file and fill in your own values:
 
-### `npm run build` fails to minify
+```bash
+cp .env.example .env
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Variable | Scope | Description |
+| --- | --- | --- |
+| `REACT_APP_FIREBASE_*` | Browser | Firebase web app configuration (API key, auth domain, project id, bucket, sender id, app id, measurement id) |
+| `REACT_APP_RECAPTCHA_SITE_KEY` | Browser | reCAPTCHA **site** key (public) |
+| `REACT_APP_WHATSAPP_NUMBER` | Browser | Number used by the floating WhatsApp button |
+| `INFOSIMPLES_TOKEN` | Server | Infosimples API token, read only by the Netlify function |
+| `INFOSIMPLES_API_URL` | Server | Optional override of the Infosimples endpoint |
+
+> 🔒 `.env` files are git-ignored. Never commit real credentials, and never put the reCAPTCHA
+> *secret* key or the Infosimples token in a `REACT_APP_*` variable: those are bundled into the
+> frontend.
+
+### Run locally
+
+With the serverless function (recommended, enables CRM validation):
+
+```bash
+npx netlify dev
+```
+
+Or just the frontend:
+
+```bash
+npm start
+```
+
+The app is served at <http://localhost:3000> (or the port printed by Netlify CLI). Restart the
+server after changing `.env`.
+
+See [`CONFIGURAR_TOKEN_DEV.md`](CONFIGURAR_TOKEN_DEV.md) and [`NETLIFY_SETUP.md`](NETLIFY_SETUP.md)
+for step-by-step guides (in Portuguese).
+
+### Granting admin access
+
+Sign up normally, then promote the account by setting `role: "admin"` on its document in the
+Firestore `users` collection. The helper in
+[`src/utils/adicionarAdmin.js`](src/utils/adicionarAdmin.js) does exactly that for a given UID.
+
+## 📜 Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the development server |
+| `npm run build` | Create an optimized production build in `build/` |
+| `npm test` | Run the test runner in watch mode |
+
+## ☁️ Deployment
+
+The project is configured for **Netlify** ([`netlify.toml`](netlify.toml)): the build publishes
+`build/`, functions live in `netlify/functions`, and every route falls back to `index.html` for
+client-side routing. Add the environment variables from the table above in
+**Site settings → Environment variables**.
+
+A [`Dockerfile`](Dockerfile) is also provided to build and serve the app in a container:
+
+```bash
+docker build -t med-lista .
+docker run -p 3000:3000 --env-file .env med-lista
+```
+
+## 🔐 Security
+
+- Credentials are injected through environment variables; none are stored in the repository or its
+  git history.
+- The only key present in the source is the reCAPTCHA **site** key, which is public by design.
+- Firestore and Storage access must be protected with proper
+  [security rules](https://firebase.google.com/docs/rules) in your Firebase project: client-side
+  route guards alone are not an authorization layer.
+
+Found a vulnerability? Please open a private security advisory instead of a public issue.
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository and create a branch: `git checkout -b feat/my-feature`
+2. Commit using [Conventional Commits](https://www.conventionalcommits.org/): `feat: add ...`
+3. Push and open a pull request describing the change
+
+## 📄 License
+
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
+
+## 👤 Author
+
+**Matheus Bomtempo**
+
+- GitHub: [@MatheusBomtempo](https://github.com/MatheusBomtempo)
+- LinkedIn: [Matheus Bomtempo](https://www.linkedin.com/in/matheus-bomtempo-9b605712a/)
+
+<div align="center">
+
+⭐ If you find this project useful, consider giving it a star!
+
+</div>
