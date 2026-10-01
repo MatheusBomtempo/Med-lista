@@ -1,0 +1,161 @@
+
+.page1{
+    height: 100vh;
+}
+
+.page1 .boxHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.page1 .boxHome .boxBg{
+    background-color: #f9ffff22;
+    box-shadow: 0 7px 21px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(4px);
+    padding: 3rem 5rem;
+    border-radius: 19px;
+    margin-top: 40px;
+    z-index: 1000;
+}
+
+.aurea1{
+    position: absolute;
+    top: 0; left: 0;
+    width: 200px;
+    height: 400px;
+}
+
+.retangulo1{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 420px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.boxBg h1{
+    color: #014A49;
+    font-size: 1.7rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+
+.boxHome h2{
+    font-family: Epilogue, sans-serif;
+    
+}
+
+/* select especialidade teste copia css */
+
+/* .slct_group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single:not(.ant-select-customize-input) .ant-select-selector,
+  .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input,
+  .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder,
+  .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single.ant-select-show-arrow .ant-select-selection-item, .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder{
+    height: 50px;
+  }
+  
+  .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+    border-radius: 50px 21px 17px 50px;
+    border: 2px solid #98D3CE;
+  }
+  
+  .slct2:where(.css-dev-only-do-not-override-j0nf2s).ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+    border-radius: 17px 50px 50px 17px;
+  }
+  
+  
+  .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder, .ant-select-selection-item{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  } */
+
+  /* select especialidade teste copia css */
+
+@media (max-height: 760px) {
+
+    .retangulo1{
+        height: 310px;
+    }
+}
+
+@media (max-width: 660px) {
+    .aurea1{
+        position: absolute;
+        top: 0; left: 0;
+        width: 200px;
+        height: 400px;
+        transform: scale(0.6);
+        transform:translateX(-93px);
+    }
+
+    .retangulo1{
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 340px;
+    }
+
+    .page1 .boxHome .boxBg{
+        margin-top: .9rem;
+        width: 350px;
+    }
+
+    .boxHome h2{
+        background-image: linear-gradient(120deg, #F9FFFF 0%, #ebedee 100%);
+    }
+
+    .boxBg h1{
+        color: #014A49;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom:1.9rem;
+    }
+
+    .boxBg .slct_group{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    /* .slct_group :where(.css-dev-only-do-not-override-j0nf2s).ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+        border-radius: .5rem;
+        border: 2px solid #98D3CE;
+      }
+
+     .ant-btn.ant-btn-circle{
+        height: auto;
+        width: 90%;
+        border: 2px solid #98D3CE;
+        border-radius: 0.5rem;
+        padding: .7rem;
+        margin-top: 1rem;
+      }
+
+      .ant-btn.ant-btn-icon-only > span::after {
+        content: "Pesquisar";
+        font-size: 1.2rem;
+        margin-left: 5px; 
+        color: #014A49;
+    } */
+
+   
+
+    }
+
+

@@ -1,0 +1,593 @@
+#lupa2{
+  padding: 0 2px;
+}
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  span,
+  button
+{
+  font-family: Montserrat, san serif;
+  font-weight: 600;
+  color: #014a49;
+}  
+
+
+
+
+
+.tudoPesquisa .textInput {
+  margin-top: 30px;
+}
+
+.tudoPesquisa .group1{
+  margin-top: 74px;
+}
+
+.tudoPesquisa .bg{
+  min-height:100vh ;
+  background-color: #F1F5F5;
+  padding: 10px 20px 2rem 20px;
+  transition: 0.2s;
+}
+
+.tudoPesquisa .titulo1 {
+  color: #014a49;
+  margin: 0 0 20px 25px;
+}
+
+.tudoPesquisa #input1 {
+  box-shadow: 4px 7px 19px rgba(0, 0, 0, 0.193);
+  background-color: #f3f8fb;
+  border-radius: 50px 50px 50px 50px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.tudoPesquisa #input2:focus {
+  border: none;
+  box-shadow: none;
+  font-family: Montserrat, sans-serif;
+}
+
+.tudoPesquisa .filtros{
+  background-color: #D9D9D9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tudoPesquisa .filtros .lettersize{
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+
+
+.tudoPesquisa .filter
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #014a49;
+  font-family: Montserrat, san serif;
+  padding: 10px 10px 10px 0;
+  width: 180px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #F3F8FB;
+  border: none;
+  transition: 0.2s;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tudoPesquisa .filter option{
+  background-color:#D9D9D9;
+}
+
+.tudoPesquisa .filter select::after{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.tudoPesquisa .dropdown-item{
+  color: #014a49;
+  font-family: Montserrat, san serif;
+  padding: 10px;
+}
+
+.tudoPesquisa .filter:hover{
+  color: #014a49;
+  background-color: #e1e1e1;
+  border: none;
+}
+
+.tudoPesquisa #input2 {
+  height: 70px;
+  border-radius: 50px 0px 0px 50px;
+  border: 0;
+  background-color: #f3f8fb;
+  color: #014a49;
+  font-family: Montserrat, san serif;
+}
+
+.tudoPesquisa #input2::placeholder {
+  font-family: Montserrat, san serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #014a4931;
+}
+
+.tudoPesquisa #button-addon2 {
+  border-radius: 50px 50px 50px 50px;
+  border: 2.5px solid #014a49;
+  padding: 14px 50px;
+  font-family: Montserrat, san serif;
+  font-size: 1.4rem;
+  color: #014a49;
+  font-weight: bold;
+}
+
+.xMrk {
+  background-color:#DDF6FA;
+}
+
+#filterDown{
+  font-size: 1.2rem;
+  /* margin-top: 5px; */
+}
+
+.tudoPesquisa .atributos .local .espacinho span:not(:last-child)::after {
+  content: ", ";
+}
+
+ .butaum{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+ .butaum button{
+  padding: 0.55em 2em;
+  border-radius: 9999px;
+  transition: color 200ms cubic-bezier(.165, .84, .44, 1);
+  background-color: #014a49a5;
+  color: #fff;
+  font-family: Montserrat, san serif;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.351);
+  transition: 0.2s;
+}
+
+.tudoPesquisa .butaum button:hover{
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.351);
+
+}
+
+.tudoPesquisa .resultados {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap:3.5rem;
+    justify-content: center;
+}
+
+.tudoPesquisa .box {
+  position: relative;
+  width: 550px;
+  background-color: #e7fbf7;
+  padding: 3% 4%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10%;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+  transition: 0.2s;
+  margin: 0 auto;
+}
+
+.tudoPesquisa .box:hover{
+  cursor: pointer;
+  box-shadow: 1px 11px 10px rgba(0,0,0,0.1);
+}
+.tudoPesquisa .resultados .flexfoto {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tudoPesquisa .resultados .flexfoto .estrelinhas #estrela{
+  color: #FBC436;
+}
+
+.tudoPesquisa .resultados .foto {
+  position: relative;
+  width: 110px;
+  height: 100px;
+  border-radius: 25px;
+  background-color: #87a4a4;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.tudoPesquisa .resultados .foto img{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tudoPesquisa .resultados .headerinner {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  text-align: justify;
+}
+
+.tudoPesquisa .resultados .headerinner .especiali {
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+.tudoPesquisa .crm {
+  font-size: 1rem;
+}
+
+.tudoPesquisa .resultados .header {
+  text-transform: capitalize;
+}
+
+.tudoPesquisa .resultados .atributos::before {
+  content: "";
+  margin: 5% 0 0 0;
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  background-color: #cee7e4;
+  overflow: hidden;
+}
+
+.tudoPesquisa .resultados .atributos h3{
+  font-weight: 600;
+  font-size: 1.6rem;
+
+}
+.tudoPesquisa .resultados .atributos .espacinho {
+  padding-left: 2%;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* DROPDOWN BUTTON */
+
+.custom-dropdown-menu {
+  position: relative;
+}
+
+.fixed-button2 {
+  position: sticky;
+  bottom: -8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: rgb(253, 253, 253);
+  /* background-color: #d77373;
+  background-color: rgba(113, 186, 164, 0.129); */
+  /* backdrop-filter: blur(10px); */
+  padding: 10px;
+  text-align: center;
+  transition: 0.2s;
+  overflow-x: hidden;
+}
+
+.fixed-button2 button:hover{
+  background-color: #014a4978;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.fixed-button2 button{
+  font-weight: 600;
+  background-color: #C4E4E1;
+  backdrop-filter: blur(10px);
+  /* box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.21); */
+  color: #014a49;
+  padding: 5px 10px;
+  border-radius: 10px;
+  /* #C4E4E1 */
+}
+
+.dropdown-menu.show{
+  min-width: 213px;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+
+#mobileScreenMenu,
+#mobileScreenMenu1{
+  display: none;
+}
+
+#verMaisPesq{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 40%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: #014a49;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+#verMaisPesq:hover{
+  background-color: #014a49d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resultOut{
+  margin-bottom: 1rem
+}
+
+
+
+/* Certifique-se de ajustar o seletor CSS acima para corresponder à sua estrutura HTML. */
+
+
+
+@media (max-width:1400px){
+  .tudoPesquisa .filter{
+  width: 140px;
+  font-size: .9rem;
+
+}
+
+.tudoPesquisa .box {
+  width: 450px;
+  padding: 3% 4%;
+}
+
+.resultados h2{
+  font-size: 1.4rem;
+}
+
+.tudoPesquisa .resultados .atributos h3 {
+  font-size: 1.2rem;
+}
+
+.tudoPesquisa .resultados .atributos .espacinho{
+  font-size: 1.2rem;
+}
+
+.tudoPesquisa .crm {
+  font-size: .8rem;
+}
+
+}
+
+@media (max-width:1200px){
+  .tudoPesquisa .filter{
+  width: 140px;
+  font-size: .9rem;
+
+}
+
+.tudoPesquisa .box {
+
+  width: 400px;
+}
+
+.resultados h2{
+  font-size: 1.2rem;
+}
+
+
+.tudoPesquisa .resultados .headerinner .especiali {
+  font-size: 1rem;
+      text-align: flex-start;
+
+}
+.tudoPesquisa .resultados .atributos h3 {
+  font-size: 1.2rem;
+}
+
+.tudoPesquisa .resultados .atributos .espacinho{
+  font-size: 1.2rem;
+}
+
+.tudoPesquisa .crm {
+  font-size: .6rem;
+}
+
+.tudoPesquisa .resultados {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap:3.5rem;
+  justify-content: center;
+}
+
+
+
+}
+
+/* @media (max-width:992px){
+  .tudoPesquisa .box {
+    width: 450px;
+  }
+
+  .tudoPesquisa .filter{
+    width: 110px;
+    font-size: .9rem;
+  }
+  
+} */
+
+@media (max-width:990px){
+
+  
+
+  
+  .tudoPesquisa .filter{
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+
+  .tudoPesquisa .filtros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .tudoPesquisa #input1{
+    height: 50px;
+  }
+
+  .tudoPesquisa #input2 {
+    height: 50px;
+  }
+
+  .tudoPesquisa #button-addon2 {
+    padding: 10px 10px;
+    font-size: 1rem;
+  }
+
+  .tudoPesquisa #input2::placeholder {
+    font-size: 1.1rem;
+  }
+
+  #lupa {
+    margin-top: 18px;
+  }
+
+  .tudoPesquisa .box {
+    width: 350px;
+    background-color: #e7fbf7;
+    padding: 3% 4%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    margin: 0 auto;
+  }
+
+  .tudoPesquisa .resultados .headerinner .especiali{
+    font-size: 1rem;
+  }
+
+  .tudoPesquisa .crm{
+    font-size: .7rem;
+  }
+
+  .tudoPesquisa .resultados .atributos h3 {
+    font-size: 1.1rem;
+  }
+
+  .tudoPesquisa .resultados .atributos .espacinho{
+    font-size: 1.2rem;
+  }
+  
+  .tudoPesquisa .resultados .foto {
+    max-width:180px;
+    height: auto;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+}
+
+/* ///////// */
+
+.tudoPesquisa .filtros {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5rem;
+}
+
+/* Novo CSS para o menu lateral */
+.tudoPesquisa .filtros.lateral {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Esconder o menu lateral por padrão */
+  width: 80%;
+  height: 100%;
+  background-color: rgba(121, 121, 121, 0.152); /* Cor de fundo com transparência */
+  z-index: 1000;
+  transition: left 0.3s ease; /* Adicionando transição suave para a animação */
+  backdrop-filter: blur(10px);
+}
+
+.tudoPesquisa .filtros.lateral.active {
+  left: 0;
+}
+
+#mobileScreenMenu,
+#mobileScreenMenu1{
+  display: flex;
+  background-image: linear-gradient(120deg, #F9FFFF 0%, #ebedee 100%);
+}
+
+
+.btnsMobile{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  gap: 1rem;
+}
+
+}
+
+@media (max-width:660px){
+
+  .tudoPesquisa .box {
+    width: 315px;
+    padding: 5% 5%;
+  }
+
+.resultados h2{
+  font-size: 1.1rem;
+}
+
+.tudoPesquisa .resultados .headerinner .especiali {
+  font-size: .8rem;
+
+}
+.tudoPesquisa .resultados .atributos h3 {
+  font-size: 1rem;
+}
+
+.tudoPesquisa .resultados .atributos .espacinho{
+  font-size: 1.1rem;
+}
+
+.tudoPesquisa .crm {
+  font-size: .5rem;
+}
+}
