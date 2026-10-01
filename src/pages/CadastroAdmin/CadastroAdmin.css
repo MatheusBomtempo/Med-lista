@@ -1,0 +1,10 @@
+/* Estilos específicos para a página de cadastro de admin */
+.cadastro-admin-container {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f0f2f5;
+}
+
