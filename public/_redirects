@@ -1,0 +1,4 @@
+# Redirecionar todas as rotas para index.html (SPA routing)
+# Nota: Funções serverless são processadas pelo Netlify antes dos redirecionamentos
+/*    /index.html   200
+

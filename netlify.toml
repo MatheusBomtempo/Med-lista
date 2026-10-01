@@ -1,0 +1,21 @@
+[build]
+  functions = "netlify/functions"
+  publish = "build"
+  command = "CI=false npm run build"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Variáveis de ambiente para desenvolvimento local
+# O Netlify CLI lê automaticamente arquivos .env na raiz do projeto
+# Crie um arquivo .env com: INFOSIMPLES_TOKEN=seu_token_aqui
+
+# Redirecionar todas as rotas para index.html (SPA routing)
+# force = false permite que arquivos existentes (incluindo funções serverless) sejam servidos normalmente
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
