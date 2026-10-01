@@ -1,0 +1,132 @@
+.containerr{
+    background-color: rgba(209, 209, 209, 0.227);
+    padding: 8%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerr .innerCont{
+    background-color: #F3F8FB;
+    box-shadow: 4px 7px 9px rgba(0, 0, 0, 0.101);
+    border-radius: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2% 9% 6% 9%;
+    position: relative;
+}
+
+ .separador{
+    position: relative;
+}
+
+.containerr .titulo{
+    text-align: center;
+    font-family: montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: #014A49;
+    margin-bottom: 40px;
+}
+
+.innerCont1{
+    margin-top: 7rem;
+  }
+
+/* .innerCont1 .left::after{
+    content: '';
+    width: 1.5px ;
+    height: 500px;
+    display: block;
+    background-color: #BCBCBC;
+    position: absolute;
+    top: 0;
+    right:347px;
+    overflow: hidden;
+} */
+
+
+/* google sing in */
+
+.right{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-with-google-btn {
+    transition: background-color .3s, box-shadow .3s;
+    width: 290px;
+    
+    padding: 12px 16px 12px 42px;
+    border: none;
+    border-radius: 26px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 15px 13px;
+}
+
+#face{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/32px-2021_Facebook_icon.svg.png);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 15px 11px;
+    background-size: 8%;
+}
+    
+    .login-with-google-btn:hover {
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+    }
+    
+    .login-with-google-btn:active {
+      background-color: #eeeeee;
+    }
+    
+    .login-with-google-btn:focus {
+      outline: none;
+      box-shadow: 
+        0 -1px 0 rgba(0, 0, 0, .04),
+        0 2px 4px rgba(0, 0, 0, .25),
+        0 0 0 3px #c8dafc;
+    }
+    
+    .login-with-google-btn:disabled {
+      filter: grayscale(100%);
+      background-color: #ebebeb;
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+      cursor: not-allowed;
+    }
+
+    @media (max-width:660px){
+        .innerCont1 .separador{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .innerCont1 .separador .left{
+            width: 90%;
+        }
+
+        .innerCont1 {
+            padding: 3rem;
+            width: 90%;        
+        }
+        
+        .innerCont1 .left::after{
+            display: none;
+        }
+        
+    }
+  
