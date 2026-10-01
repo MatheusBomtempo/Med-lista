@@ -1,0 +1,66 @@
+.posMed{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    transition: 0.2s ease-out;
+}
+
+.medOrUser{
+    color: #014A49;
+    font-family: epilogue, san serif;
+    font-size: 1.6rem;
+    margin: 200px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    border-radius: 20px;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: #F3F8FB;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.265);
+    transition: 0.2s ease-out;
+}
+
+
+
+.medOrUser button{
+    color: #014A49;
+    font-weight: 500;
+    background-color: #ACCECD;
+    padding: 5px 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.116);
+    transition: 0.2s ease-out;
+}
+
+
+.medOrUser button:hover{
+    background-color: #b4d2d1;
+    font-size: 90%;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.116);
+}
+
+.posMed.active{
+    display: none;
+}
+
+
+@media (max-width:990px){
+
+.posMed{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    transition: 0.2s ease-out;
+}
+
+.medOrUser{
+    width: 300px;
+    line-height: 1.3;
+}
+
+}

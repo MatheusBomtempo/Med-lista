@@ -1,0 +1,128 @@
+:root{
+  height: 100vh;
+}
+
+.tudo {
+  margin-top: 5%;
+  background-color: #e9f1f1;
+  padding: 5% 0;
+}
+
+.enviar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cadastroMed{
+  margin-top: 1.5rem;
+}
+
+.cadastroMed .formInside{
+  margin: 0 auto;
+  max-width: 70%;
+  padding: 3% 4%;
+}
+
+.container .EditarFoto{
+  max-width: 80%;
+}
+
+.cadastroMed .formInside h1{
+  font-family: Montserrat, san serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #014a49ea;
+}
+
+.cadastroMed .ant-form-item-required,
+.ant-col, .ant-input{
+  font-family: Montserrat, san serif;
+  font-weight: bold;
+}
+
+.cadastroMed .formInside .btn33{
+  font-family: Montserrat, san serif;
+  font-weight: bold;
+  padding: 15px 25px;
+  background-color: #014a49c3;
+  transition: 0.4s;
+  box-shadow: 10px 10px 30px #014a496d;
+}
+
+.cadastroMed .formInside .btn33 span{
+  color: #fff;
+}
+
+.cadastroMed .formInside .btn33:hover{
+  background-color: #014a4955;
+  box-shadow: 2px 3px 10px #014a496d;
+}
+
+.ant-input::placeholder,
+.ant-select-selection-placeholder{
+  font-family: Montserrat, san serif;
+  font-weight: 600;
+}
+
+.foto img{
+  aspect-ratio: 1/1;
+  max-width: 200px;
+  height: auto;
+}
+
+.infoEditarFoto{
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.butAd{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.certificaMinor{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: .8rem;
+  margin: 1rem 0;
+}
+
+.certiMinor{
+  margin: 0 1rem 0 0;
+}
+
+.container .EdicaoMed{
+  width: 60%;
+}
+
+.ant-layout-sider-trigger{
+  background-color: #fff !important;
+}
+
+.ant-layout-sider-trigger span{
+  color: #014a4955;
+}
+
+@media (max-width: 660px){
+  .cadastroMed .formInside{
+    padding: 0% 0%;
+    max-width: 100%;
+  }
+
+  .foto img{
+    max-height: 250px;
+  }
+
+  .container .EdicaoMed{
+    width: 100%;
+  }
+
+  .container .EditarFoto{
+    max-width: 100%;
+  }
+
+}

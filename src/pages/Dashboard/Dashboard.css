@@ -1,0 +1,155 @@
+.posMed {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  transition: 0.2s ease-out;
+}
+
+.medOrUser {
+  color: #014a49;
+  font-family: epilogue, san serif;
+  font-size: 1.6rem;
+  margin: 200px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  border-radius: 20px;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #f3f8fb;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.265);
+  transition: 0.2s ease-out;
+}
+
+.medOrUser button {
+  color: #014a49;
+  font-weight: 500;
+  background-color: #accecd;
+  padding: 5px 30px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.116);
+  transition: 0.2s ease-out;
+}
+
+.medOrUser button:hover {
+  background-color: #b4d2d1;
+  font-size: 90%;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.116);
+}
+
+.posMed.active {
+  display: none;
+}
+
+.botaoCriarPerfil {
+  border: 1px solid #014a49;
+  transition: background-color 0.3s ease;
+}
+
+.botaoCriarPerfil:hover {
+  background-color: #014a49;
+  color: #ffffff;
+}
+
+.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-light.css-dev-only-do-not-override-j0nf2s {
+  min-height: 100vh;
+  height: 100%!important;
+}
+
+.ant-layout-sider{
+  background-color: #ffffff !important;
+}
+
+.perfilMed-wrapper #firstBox {
+padding-top: 0 !important;
+}
+
+.no-profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.no-profile-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f8fb 100%);
+  border: 2px solid #014A49;
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(1, 74, 73, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-profile-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(1, 74, 73, 0.25);
+}
+
+.no-profile-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-profile-title {
+  color: #014A49;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.no-profile-message {
+  color: #014A49;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.no-profile-hint {
+  color: #014A49;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  padding: 1rem;
+  background-color: #DDF1EF;
+  border-radius: 10px;
+  border-left: 4px solid #014A49;
+}
+
+.no-profile-hint strong {
+  color: #014A49;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .no-profile-content {
+    padding: 2rem 2rem;
+    margin: 1rem;
+  }
+
+  .no-profile-title {
+    font-size: 1.5rem;
+  }
+
+  .no-profile-message {
+    font-size: 1rem;
+  }
+
+  .no-profile-hint {
+    font-size: 0.9rem;
+  }
+}
