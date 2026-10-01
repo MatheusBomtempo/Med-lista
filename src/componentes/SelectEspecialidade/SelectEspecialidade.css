@@ -1,0 +1,144 @@
+/* .search{
+    
+    background-color: black;
+    width: 2000px;
+    height: 2000px;
+} */
+
+
+.slct_group{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+
+.ant-select-selection-placeholder{
+  height: 35px  !important;
+}
+
+.slct .ant-select-selector{
+  border-radius: 50px 21px 17px 50px !important;
+  border: 2px solid #98D3CE !important;
+  height: 50px !important;
+  padding: .5rem 1rem !important;
+}
+
+.slct2 .ant-select-selector{
+  border-radius: 17px 50px 50px 17px !important;
+  border: 2px solid #98D3CE !important;
+  height: 50px !important;
+  padding: .5rem 1rem !important;
+}
+
+/* .slct .ant-select-selection-wrap{
+  height: 35px  !important;
+} */
+
+
+.slct .ant-select-selection-item{
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+/* botao de pesquisa */
+
+#btn_pesquisar{
+  height: 45px;
+  width: 45px;
+  min-width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #98D3CE;
+}
+
+.slct .ant-select-selector,.slct2 .ant-select-selector {
+  border: 2px solid #98D3CE !important;
+  height: 50px !important;
+  padding: .2rem 1rem !important;
+}
+
+#rc_select_0{
+  padding: .5rem 1rem !important;
+}
+
+
+
+@media (max-width:660px){
+  #btn_pesquisar{
+    height: 40px;
+    width: 90%;
+  }
+
+  .slct .ant-select-selector,.slct2 .ant-select-selector{
+    border-radius: .5rem;
+    height: 40px !important;
+  }
+
+  .slct .ant-select-selector{
+    border-radius: .5rem !important;
+    height: 40px !important;
+  }
+  
+  .slct2 .ant-select-selector{
+    border-radius: .5rem !important;
+    height: 40px !important;
+  }
+
+  /* Adicionar texto "Pesquisar" apenas no mobile */
+  /* Usar seletor muito específico para evitar duplicação */
+  #btn_pesquisar.ant-btn.ant-btn-icon-only > span::after {
+    content: " Pesquisar" !important;
+    font-size: 1.2rem;
+    margin-left: 5px; 
+    color: #014A49;
+    display: inline-block;
+  }
+  
+  /* Garantir que não haja duplicação - remover ::after de elementos filhos */
+  #btn_pesquisar.ant-btn.ant-btn-icon-only span span::after,
+  #btn_pesquisar.ant-btn.ant-btn-icon-only span svg::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  #btn_pesquisar.ant-btn{
+    height: auto;
+    width: 90%;
+    border: 2px solid #98D3CE;
+    border-radius: 0.5rem;
+    padding: .7rem;
+    margin-top: 1rem;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

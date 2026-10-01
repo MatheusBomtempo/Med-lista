@@ -1,0 +1,42 @@
+.lazy-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.lazy-image-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.lazy-image-loader .loader {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.lazy-image {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+  display: block;
+}
+
+.lazy-image-hidden {
+  opacity: 0;
+}
+
+.lazy-image-visible {
+  opacity: 1;
+}
+
