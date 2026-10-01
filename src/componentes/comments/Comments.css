@@ -1,0 +1,109 @@
+a span{
+    transition: 0.1s;
+}
+
+a:hover span{
+    color: white;
+}
+
+.esqAva{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#avaliaFlex{
+    justify-content: space-between;
+    padding: 0 2rem;
+
+}
+
+.comName p,
+.comName h2,
+.comName h3{
+    margin: 0;
+    text-transform: capitalize
+}
+
+#comTrans{
+    opacity: 0.3;
+}
+
+.comName{
+    display: flex;
+    align-items: center;
+}
+
+.comments .comName h3{
+    display: inline-block;
+    width: 282px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userComentFt{
+    width: 50px;
+    margin-right: 1rem;
+}
+
+.userComentFt img{
+    border-radius: 3rem;
+}
+
+.commentsCh1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem ;
+}
+
+.comReview{
+    padding: 0 2rem;
+}
+
+#btnAvl:hover span{
+    color: white;
+
+}
+
+.denuncia{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    border: 1px solid #cb2222;
+    border-radius: 1rem;
+    opacity: .7;
+    padding: .3rem .3rem;
+}
+
+.denuncia button,  
+#warningico{
+    color: #cb2222;
+    opacity: .7;
+}
+
+.denuncia:hover, button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+@media (max-width:660px){
+    .commentsCh1{
+        flex-direction: column;
+        align-items:start;
+    }
+
+    .comments .comName h3{
+        display: inline-block;
+        width: 187px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+}

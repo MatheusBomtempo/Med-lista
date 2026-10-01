@@ -1,0 +1,238 @@
+h5{
+    font-family: Montserrat, san serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #014a49;
+    margin: 0;
+
+}
+
+.containerAvalia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerAvalia .tam{
+    background-color: #E7FBF7;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+    margin-top: 6rem;
+}
+
+.containerAvalia .tam .tit{
+    display: flex;
+}
+
+.reviewStar p{
+    margin: 0;
+}
+
+.maxLetras{
+    display: inline-block;
+    width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#arrowleft{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+.containerAvalia .resultados1{
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+
+.estrelinho{
+    display: flex;
+    position: absolute;
+}
+
+.botaozinhu{
+    background-color: #014A49;
+    color: white;
+    border: none;
+    padding: .5rem .9rem;
+    border-radius: 3rem;
+    display: inline;
+    justify-content: flex-end;
+    transition: .2s ease-in-out;
+}
+
+.botaozinhu:hover{
+    transform: scale(1.06);
+    box-shadow:
+    0.7px 1px 5.3px rgba(0, 0, 0, 0.065),
+    2.5px 3.4px 17.9px rgba(0, 0, 0, 0.095),
+    11px 15px 80px rgba(0, 0, 0, 0.16)
+  ;
+}
+
+.botaoalig {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reviewStar{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.reviewStar .mini{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.avaliaStar{
+    padding: 2rem 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+  .estrelaicon {
+    font-size: 2.6rem;
+    padding-right: 1rem;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .15s ease-out;
+  }
+
+  .estrelaicon:hover{
+    transform: scale(1.1);
+  }
+  
+  /* Add rules for hover effect on both FontAwesomeIcon and StarOutline */
+
+
+.containerAvalia h1
+{
+  font-family: Montserrat, san serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #014a49;
+  margin: 0;
+}
+
+/* #ScreenTwo{
+    margin-top: 8rem
+} */
+
+.perguntas input,.perguntas textarea{
+    margin: 1rem 0 1rem 0;
+}
+
+.termo{
+    display: flex;
+    align-items: first baseline;
+}
+.termo input{
+    margin-right: 1rem;
+}
+
+.explicacao{
+    width: 500px;
+}
+
+.botaoHome{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.botaoHome p{
+    color: aliceblue;
+}
+.botaoHome .botaozinhu{
+    padding: .6rem;
+    border-radius: 2rem;
+}
+
+#firstbox2{
+    margin-top: 5rem;
+}
+.SaibaMais:hover{
+    cursor: pointer;
+}
+
+@media (max-width:1400px){
+    .maxLetras{
+        width: 244px;
+    }
+}
+
+@media (max-width:1200px){
+    .maxLetras{
+        width: 200px;
+    }
+}
+
+@media (max-width:990px){
+
+    .maxLetras {
+      display: inline-block;
+      width: 199px;
+  }
+}
+
+
+@media (max-width:660px){
+
+    
+
+    .containerAvalia .tam{
+        width: 360px;
+        max-width: 380px;
+        min-width: 330px;
+    }
+    .containerAvalia .tam h1{
+        font-size: 1.3rem;
+    }
+
+    .containerAvalia .botaoalig{
+        margin-top: 2rem;
+    }
+
+    .containerAvalia .mini p{
+        margin: 2rem 0rem;
+    }
+
+    .containerAvalia .explicacao{
+        width: 300px;
+        margin-bottom: 2rem;
+    }
+
+    .containerAvalia .explicacao p{
+        font-size: .9rem;
+    }
+
+    .containerAvalia .tam .botaoHome{
+        margin-top: 2rem;
+    }
+    .maxLetras {
+        width: 159px;
+    }
+    
+
+}
+
+@media (max-height:660px){
+    .containerAvalia .tam{
+        height: 100%;
+    }
+
+
+}
