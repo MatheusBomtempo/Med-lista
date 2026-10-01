@@ -10,10 +10,10 @@
 </p>
 
 <p>
-  <a href="https://med-lista.com"><strong>🌐 Live site</strong></a> ·
-  <a href="#-features">Features</a> ·
-  <a href="#-getting-started">Getting started</a> ·
-  <a href="#-architecture">Architecture</a>
+  <a href="https://med-lista.com"><strong>Live site</strong></a> ·
+  <a href="#features">Features</a> ·
+  <a href="#getting-started">Getting started</a> ·
+  <a href="#architecture">Architecture</a>
 </p>
 
 <p>
@@ -30,7 +30,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 **Med Lista** connects patients with physicians. Patients search the directory, filter by what
 matters to them and read honest reviews. Doctors register, get their **CRM** (Brazilian medical
@@ -39,31 +39,31 @@ the catalog trustworthy by approving profiles and moderating comments.
 
 > The interface is in Brazilian Portuguese, since the platform serves Brazilian patients.
 
-## ✨ Features
+## Features
 
 ### For patients
-- 🔎 **Smart search** by specialty, city, health insurance (*convênio*), minimum rating or doctor name
-- 🩺 **Rich doctor profiles** with specialty, CRM, location, accepted insurance plans and contact links
-- ⭐ **Reviews and ratings** to help others choose, with phone (SMS) verification to curb fake reviews
-- 💬 **Floating WhatsApp button** for quick support
+- **Smart search** by specialty, city, health insurance (*convênio*), minimum rating or doctor name
+- **Rich doctor profiles** with specialty, CRM, location, accepted insurance plans and contact links
+- **Reviews and ratings** to help others choose, with phone (SMS) verification to curb fake reviews
+- **Floating WhatsApp button** for quick support
 
 ### For doctors
-- 📝 **Guided registration** and profile editing, including profile photo upload
-- ✅ **Automatic CRM validation** against the national medical council registry
-- 📊 **Dashboard** with profile views over time, ratings and link-click statistics (Instagram, Lattes)
+- **Guided registration** and profile editing, including profile photo upload
+- **Automatic CRM validation** against the national medical council registry
+- **Dashboard** with profile views over time, ratings and link-click statistics (Instagram, Lattes)
 
 ### For admins
-- 🛡️ **Profile approval** queue (single or bulk) before a profile goes public
-- 🧹 **Comment moderation**
-- ⚙️ **Catalog management** for specialties, health insurance plans and admin users, plus global settings
+- **Profile approval** queue (single or bulk) before a profile goes public
+- **Comment moderation**
+- **Catalog management** for specialties, health insurance plans and admin users, plus global settings
 
 ### Under the hood
-- 🔐 Email/password and Google sign-in, with **private** and **admin-only** route guards
-- 🤖 **reCAPTCHA** on login and sign-up
-- ⚡ Lazy-loaded routes, images and backgrounds for fast first paint
-- 🧯 Error boundaries and a friendly 404 page
+- Email/password and Google sign-in, with **private** and **admin-only** route guards
+- **reCAPTCHA** on login and sign-up
+- Lazy-loaded routes, images and backgrounds for fast first paint
+- Error boundaries and a friendly 404 page
 
-## 🧰 Tech stack
+## Tech stack
 
 | Layer | Technology |
 | --- | --- |
@@ -73,7 +73,7 @@ the catalog trustworthy by approving profiles and moderating comments.
 | Serverless | Netlify Functions (CRM validation through the Infosimples API) |
 | Tooling | Create React App, Docker |
 
-## 🏗️ Architecture
+## Architecture
 
 ```text
 ┌──────────────┐        ┌────────────────────────┐
@@ -106,7 +106,7 @@ environment.
     └── firebase.js         # Firebase initialization (env-driven)
 ```
 
-## 🚀 Getting started
+## Getting started
 
 ### Prerequisites
 
@@ -141,7 +141,7 @@ cp .env.example .env
 | `INFOSIMPLES_TOKEN` | Server | Infosimples API token, read only by the Netlify function |
 | `INFOSIMPLES_API_URL` | Server | Optional override of the Infosimples endpoint |
 
-> 🔒 `.env` files are git-ignored. Never commit real credentials, and never put the reCAPTCHA
+> `.env` files are git-ignored. Never commit real credentials, and never put the reCAPTCHA
 > *secret* key or the Infosimples token in a `REACT_APP_*` variable: those are bundled into the
 > frontend.
 
@@ -171,7 +171,7 @@ Sign up normally, then promote the account by setting `role: "admin"` on its doc
 Firestore `users` collection. The helper in
 [`src/utils/adicionarAdmin.js`](src/utils/adicionarAdmin.js) does exactly that for a given UID.
 
-## 📜 Scripts
+## Scripts
 
 | Command | Description |
 | --- | --- |
@@ -179,7 +179,7 @@ Firestore `users` collection. The helper in
 | `npm run build` | Create an optimized production build in `build/` |
 | `npm test` | Run the test runner in watch mode |
 
-## ☁️ Deployment
+## Deployment
 
 The project is configured for **Netlify** ([`netlify.toml`](netlify.toml)): the build publishes
 `build/`, functions live in `netlify/functions`, and every route falls back to `index.html` for
@@ -193,7 +193,7 @@ docker build -t med-lista .
 docker run -p 3000:3000 --env-file .env med-lista
 ```
 
-## 🔐 Security
+## Security
 
 - Credentials are injected through environment variables; none are stored in the repository or its
   git history.
@@ -204,7 +204,7 @@ docker run -p 3000:3000 --env-file .env med-lista
 
 Found a vulnerability? Please open a private security advisory instead of a public issue.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 
@@ -212,11 +212,11 @@ Contributions are welcome!
 2. Commit using [Conventional Commits](https://www.conventionalcommits.org/): `feat: add ...`
 3. Push and open a pull request describing the change
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
-## 👤 Author
+## Author
 
 **Matheus Bomtempo**
 
@@ -225,6 +225,6 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 <div align="center">
 
-⭐ If you find this project useful, consider giving it a star!
+If you find this project useful, consider giving it a star!
 
 </div>
