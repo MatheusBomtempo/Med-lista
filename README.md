@@ -1,44 +1,70 @@
-# Med-Lista
+# Getting Started with Create React App
 
-Bem-vindo ao repositório do **Med-Lista**, a sua plataforma de busca médica abrangendo todas as especialidades. Desenvolvido com React para o frontend, Firebase como banco de dados e Node.js para o backend, o Med-Lista oferece uma experiência de usuário fluida e eficiente para encontrar profissionais de saúde em diversas especialidades.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Visite **www.med-lista.com** para explorar a plataforma.
+## Available Scripts
 
-## Preview do Projeto
+In the project directory, you can run:
 
-![Med-Lista Site Preview](medlistascreenshoot.jpg)
+### `npm start`
 
-# Aviso Importante
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Este repositório **não contém o código-fonte** do projeto devido à presença de dados sensíveis e chaves de API que, se expostas, poderiam comprometer a segurança e privacidade de nossos usuários. Caso necessite de provas de desenvolvimento ou tenha questões específicas, por favor, entre em contato através do [LinkedIn de Matheus Bomtempo](https://www.linkedin.com/in/matheus-bomtempo-9b605712a/).
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Sobre o Projeto
+### `npm test`
 
-Med-Lista visa simplificar a busca por profissionais médicos, oferecendo uma plataforma fácil de navegar, onde usuários podem encontrar médicos de todas as especialidades em sua região, ver detalhes sobre os profissionais e entrar em contato direto.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Funcionalidades
+### `npm run build`
 
-- **Busca Personalizada:** Encontre médicos por especialidade, localização e avaliações.
-- **Perfis Detalhados:** Acesse informações detalhadas sobre os profissionais, incluindo experiência, qualificações e avaliações de outros pacientes.
-- **Interface Amigável:** Uma plataforma fácil de usar, projetada para oferecer a melhor experiência ao usuário.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Tecnologias Utilizadas
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- **React.js:** Para uma interface de usuário interativa.
-- **Firebase:** Para armazenamento de dados e autenticação.
-- **Node.js:** Para a lógica de servidor e integrações de API.
-- Design criado no **Figma** por Matheus Bomtempo.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Visite **www.med-lista.com** para explorar a plataforma.
+### `npm run eject`
 
-## Como Contribuir
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Interessado em contribuir para o Med-Lista? Embora o código-fonte não esteja disponível publicamente por motivos de segurança, valorizamos suas ideias e feedback. Entre em contato conosco via [LinkedIn](https://www.linkedin.com/in/matheus-bomtempo-9b605712a/) para discutir como você pode contribuir.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Licença
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Este projeto está sob uma licença MIT.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
----
+## Learn More
 
-Desenvolvido por Matheus Bomtempo e Thaian ramalho.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
